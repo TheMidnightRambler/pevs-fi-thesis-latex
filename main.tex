@@ -5,7 +5,7 @@
 \usepackage{setspace}
 \usepackage{pdfpages}
 \usepackage{newtxtext} % Times New Roman
-\usepackage[a4paper, left=3.5cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry} % Mandatory margins
+\usepackage[a4paper, left=3.5cm, right=2cm, top=2.5cm, bottom=2.5cm]{geometry} % Margins
 \usepackage{graphicx}
 \usepackage[table]{xcolor}
 \usepackage{tocbibind}
@@ -72,9 +72,11 @@
 \g@addto@macro\@floatboxreset{\centering}  % Centers all figures by default
 \makeatother
 
-% Exclude appendices from adding to list of figures
+% Exclude appendices from adding to list of figures and hide labels
 \newenvironment{appendixfigure}
-    {\begin{figure}[h]\renewcommand{\addcontentsline}[3]{}}
+    {\begin{figure}[h]
+        \renewcommand{\addcontentsline}[3]{}
+        \renewcommand{\caption}[1]{}}
     {\end{figure}}
 
 % Code styling
