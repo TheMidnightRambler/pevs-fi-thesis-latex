@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 
 % Packages
-\usepackage[slovak,english]{babel}
+\usepackage[main=slovak,english]{babel}
 \usepackage{setspace}
 \usepackage{pdfpages}
 \usepackage{newtxtext} % Times New Roman
@@ -13,6 +13,7 @@
 \usepackage{glossaries}
 \usepackage{url}
 \usepackage{caption}
+\usepackage{csquotes}
 
 % Optional packages
 %
@@ -27,7 +28,7 @@
 \author{Bc. Alfréd Kôstka}
 \def\supervisor{doc. Ing. Severín Hrot, PhD.}
 \def\consultant{Mgr. Ignác Šváb} % Optional, remove in titlepage-alt
-%
+
 % University metadata
 \def\uid{FI-123456-12345} % Replace with your own student ID
 \def\university{PANEURÓPSKA VYSOKÁ ŠKOLA}
@@ -44,6 +45,16 @@
 \fancyfoot{}
 \fancyfoot[R]{\thepage}
 \renewcommand{\headrulewidth}{0pt}%
+%
+% Bibliography configuration
+% style = iso-authoryear, iso-numeric
+% use \parencite{} or \textcite{} when using iso-authoryear
+% use \cite{} when using iso-numeric
+\usepackage[
+    style=iso-authoryear,
+    ]{biblatex}
+\addbibresource{essentials/bibliography.bib}
+
 %
 % Acronyms
 \makeglossaries
@@ -128,9 +139,8 @@ Cieľ bakalárskej práce bol splnený.
 
 % Bibliography
 \newpage
-\bibliographystyle{plain}
-%\nocite{*} % Optional, print all references
-\bibliography{essentials/bibliography}
+\printbibliography[title={Použitá literatúra}]
+\addcontentsline{toc}{section}{Použitá literatúra}
 
 % Appendices
 \include{essentials/appendices}
