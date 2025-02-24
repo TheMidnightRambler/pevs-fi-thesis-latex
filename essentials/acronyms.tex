@@ -1,1 +1,41 @@
-\newacronym{todo}{TODO}{Fix abbreviations}
+\newacronymstyle{simple-desc}
+{%
+    \GlsUseAcrEntryDispStyle{long-short}%
+}
+{%
+    \renewcommand*{\glossentry}[2]{%
+        \item[\glsentryitem{##1}%
+        \glstarget{##1}{\glsentryshort{##1}}]
+        \glsentrylong{##1}\ifglshasfield{description}{##1}{\newline\glsentrydesc{##1}}{}%
+    }%
+}
+
+\newacronymstyle{tabular-style}
+{%
+    \GlsUseAcrEntryDispStyle{long-short}%
+}
+{%
+    \renewcommand*{\glossentry}[2]{%
+        \item[]%
+        \begin{tabular}{@{}ll@{}}
+            \textbf{\glsentryshort{##1}} & \glsentrylong{##1} \\
+            & \glsentrydesc{##1}
+        \end{tabular}\\[1ex]%
+    }%
+}
+
+\setacronymstyle{tabular-style}
+
+
+% Define acronyms with descriptions
+\newacronym
+    [description={A standardized visual modeling language used in software engineering}]
+    {UML}{UML}{Unified Modeling Language}
+
+\newacronym
+    [description={A set of rules that allow programs to communicate with each other}]
+    {API}{API}{Application Programming Interface}
+
+\newacronym
+    [description={The foundation of data communication on the World Wide Web}]
+    {HTTP}{HTTP}{Hypertext Transfer Protocol}
