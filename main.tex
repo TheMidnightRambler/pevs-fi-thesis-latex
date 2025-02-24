@@ -14,7 +14,7 @@
 \usepackage{url}
 \usepackage{caption}
 \usepackage{csquotes}
-\usepackage{array}
+\usepackage{longtable}
 
 % Optional packages
 \usepackage{listings}% Code blocks with syntax highlighting:
@@ -34,7 +34,7 @@
 \def\fieldofstudy{Informatika}
 \def\department{Ústav aplikovanej informatiky}
 
-% Bibliography configuration
+% Bibliography configuration for STN ISO 690
 % style = iso-authoryear, iso-numeric
 % use \parencite{} or \textcite{} when using iso-authoryear
 % use \cite{} when using iso-numeric
@@ -115,20 +115,24 @@
 \pagebreak
 
 % Print Glossary
-\glsaddall
-\printglossary[type=\acronymtype, title={Zoznam skratiek a značiek}]
+%\glsaddall % Optional for printing all acronyms, even if not used
+\printglossary[type=\acronymtype,title={Zoznam skratiek a značiek}]
 \addcontentsline{toc}{section}{Zoznam skratiek a značiek}
-\pagebreak
+
 
 %%%%%%% DOCUMENT BODY %%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \section{Úvod}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu lacus leo. Nulla egestas purus non dignissim tincidunt. In sit amet tellus bibendum, lobortis magna ut, sodales mi. Etiam vel eros efficitur purus ultrices vulputate et quis justo. Nunc ultrices tellus a dui mattis, eget laoreet arcu tempor. Donec vestibulum, magna ac fringilla lacinia, libero risus fringilla arcu, nec consectetur nibh justo vel sem. Quisque gravida sit amet elit ut aliquam.....
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu lacus leo. Nulla egestas purus non dignissim tincidunt. In sit amet tellus bibendum, lobortis magna ut, sodales mi. Etiam vel eros efficitur purus ultrices vulputate et quis justo. Nunc ultrices tellus a dui mattis, eget laoreet arcu tempor. Donec vestibulum, magna ac fringilla lacinia, libero risus fringilla arcu, nec consectetur nibh justo vel sem. Quisque gravida sit amet elit ut aliquam...\par
 \vspace{1em}
-\\V prvej kapitole je popísaný súčasný stav riešenia problematiky. Popísaná je konštrukcia takého systému, ktorý ....
-\\V druhej kapitole prezentujeme návrh systému ...
-\\V tretej kapitole sme sa zaoberali popisom implementácie systému...
+\noindent
+V prvej kapitole je popísaný súčasný stav riešenia problematiky. Popísaná je konštrukcia takého systému, ktorý ....
+
+\noindent
+V druhej kapitole prezentujeme návrh systému ...
+
+\noindent
+V tretej kapitole sme sa zaoberali popisom implementácie systému...
 
 % Examples:
 \include{examples/examples} 

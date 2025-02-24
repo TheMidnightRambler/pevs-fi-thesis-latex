@@ -1,41 +1,31 @@
-\newacronymstyle{simple-desc}
+% Set Acronym style
+\newacronymstyle{single-table}
 {%
     \GlsUseAcrEntryDispStyle{long-short}%
 }
 {%
-    \renewcommand*{\glossentry}[2]{%
-        \item[\glsentryitem{##1}%
-        \glstarget{##1}{\glsentryshort{##1}}]
-        \glsentrylong{##1}\ifglshasfield{description}{##1}{\newline\glsentrydesc{##1}}{}%
+    %\renewcommand*{\glossarysection}[2][]{}%
+    \renewcommand{\glossentry}[2]{%
+        \textbf{\glsentryshort{##1}} & \glsentrylong{##1} \newline \glsentrydesc{##1} \tabularnewline[3em]  % Spacing between entries
     }%
+    \renewcommand{\glsgroupheading}[1]{}%
+    \renewcommand{\glsgroupskip}{}%
+    \renewenvironment{theglossary}%
+    {\begin{longtable}{@{}p{0.15\linewidth}p{0.85\linewidth}@{}}}%
+    {\end{longtable}\pagebreak}%
 }
+\setacronymstyle{single-table}
 
-\newacronymstyle{tabular-style}
-{%
-    \GlsUseAcrEntryDispStyle{long-short}%
-}
-{%
-    \renewcommand*{\glossentry}[2]{%
-        \item[]%
-        \begin{tabular}{@{}ll@{}}
-            \textbf{\glsentryshort{##1}} & \glsentrylong{##1} \\
-            & \glsentrydesc{##1}
-        \end{tabular}\\[1ex]%
-    }%
-}
-
-\setacronymstyle{tabular-style}
-
-
-% Define acronyms with descriptions
-\newacronym
-    [description={A standardized visual modeling language used in software engineering}]
-    {UML}{UML}{Unified Modeling Language}
+% Define Acronyms with description
 
 \newacronym
-    [description={A set of rules that allow programs to communicate with each other}]
-    {API}{API}{Application Programming Interface}
+[description={Univerzálny jazyk pre vizuálne modelovanie systémov}]
+{UML}{UML}{Unified Modeling Language}
 
 \newacronym
-    [description={The foundation of data communication on the World Wide Web}]
-    {HTTP}{HTTP}{Hypertext Transfer Protocol}
+[description={Jazyk pre špecifikáciu obmedzení, dotazov a vyhľadávacích operácií v UML}]
+{OCL}{OCL}{Object Constraint Language}
+
+\newacronym
+[description={Notácia pre modelovanie business procesov}]
+{BPMN}{BPMN}{Business Process Model and Notation}
