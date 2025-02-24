@@ -114,7 +114,7 @@ The `examples` section is mostly defined by the university, use it as a referenc
 ### Bibliography
 References are stored in `essentials/bibliography.bib` and displayed using the **STN ISO 690** norm. Examples are provided in file.
 
-```toml
+```bibtex
 @book{borgman2003from,
 author = {Borgman, Christine L.},
 title = {From {Gutenberg} to the Global Information Infrastructure},
@@ -148,7 +148,7 @@ Template supports two citation styles:
 
 
 2. **Numeric Style** (`iso-numeric`)
-   - Using `\cite` will add number `[X]` in text and sort references by occurence   
+   - Using `\cite{}` will add number `[X]` in text and sort references by occurence   
    - Format: `\cite{key}` → [1]
    - Example: `\cite{knuth1984}` → [1]
    
@@ -194,10 +194,7 @@ Second use: \gls{UML} will show just "UML"
 ### Images
 
 #### Default Configuration
-All images are automatically:
-- Centered on the page
-- Sized to 90% of text width
-- Numbered sequentially
+All images are automatically centered on the page and sized to 90% of text width.
 
 > **Note**: Default settings can be modified in `main.tex` in the **Default image options** section
 
