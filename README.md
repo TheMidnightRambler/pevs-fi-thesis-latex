@@ -19,17 +19,35 @@ Unofficial LaTeX template for bachelor/master thesis at [Pan-European University
 
 ## Setup
 
-1. Clone this repository:
-```bash
-git clone https://github.com/TheMidnightRambler/pevs-fi-thesis-latex.git
-cd pevs-fi-thesis-latex
-```
+### Getting the Template
+There are three ways to get started:
 
-2. Replace placeholder content:
-   - Edit `main.tex` and fill out the metadata section
-   - Replace `essentials/assignment.pdf` with your own assignment
-   - Edit `essentials/abstract.tex` with your abstract
-   - Edit `essentials/acknowledgment.tex` and `essentials/declaration.tex` if necessary
+1. **Use as Template** (Recommended)
+   - Visit the [GitHub repository](https://github.com/TheMidnightRambler/pevs-fi-thesis-latex)
+   - Click the green "Use this template" button in the top right
+   - Select "Create a new repository"
+   - Follow the prompts to create your own repository
+
+2. **Clone Repository**
+   ```bash
+   git clone https://github.com/TheMidnightRambler/pevs-fi-thesis-latex.git
+   cd pevs-fi-thesis-latex
+   ```
+
+3. **Download ZIP**
+   - Visit the [GitHub repository](https://github.com/TheMidnightRambler/pevs-fi-thesis-latex)
+   - Click the "Code" dropdown button 
+   - Select "Download ZIP"
+   - Extract the downloaded file to your preferred location
+
+### Customizing Content
+After obtaining the template:
+
+- Edit `main.tex` and fill out the metadata section
+- Replace `essentials/assignment.pdf` with your own assignment
+- Edit `essentials/abstract.tex` with your abstract
+- Edit `essentials/acknowledgment.tex` and `essentials/declaration.tex` if necessary
+
 > **Note**: Remove *Consultant* row from the table in `titlepage-alt.tex` if not needed.
 
 
