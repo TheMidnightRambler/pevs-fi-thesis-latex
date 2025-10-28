@@ -16,6 +16,9 @@
 \usepackage{csquotes}
 \usepackage{longtable}
 
+\usepackage[T1]{fontenc} % Formatting
+\usepackage[utf8]{inputenc}
+
 % Optional packages
 \usepackage{listings}% Code blocks with syntax highlighting:
 %\usepackage{hyperref} % PDF hyperlinks
@@ -115,9 +118,10 @@
 \pagebreak
 
 % Print Glossary
-%\glsaddall % Optional for printing all acronyms, even if not used
-\printglossary[type=\acronymtype,title={Zoznam skratiek a značiek}]
+\glsaddall % Optional for printing all acronyms, even if not used
 \addcontentsline{toc}{section}{Zoznam skratiek a značiek}
+\printglossary[type=\acronymtype,title={Zoznam skratiek a značiek}]
+
 
 
 %%%%%%% DOCUMENT BODY %%%%%%%
